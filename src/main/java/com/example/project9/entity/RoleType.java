@@ -1,4 +1,4 @@
-package com.example.project9.model;
+package com.example.project9.entity;
 
 public enum RoleType {
     USER, ADMIN
