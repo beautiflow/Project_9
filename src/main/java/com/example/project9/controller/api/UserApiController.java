@@ -17,7 +17,7 @@ public class UserApiController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/Project_9/api/user")
+    @PostMapping("/api/user")
     public ResponseDto<Integer> save(@RequestBody User user){
         System.out.println("UserApiController : save 호출됨");
         user.setRole(RoleType.USER);
@@ -25,7 +25,7 @@ public class UserApiController {
         return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
     }
 
-    @PostMapping("/Project_9/api/user/login")
+    @PostMapping("/api/user/login")
     public ResponseDto<Integer> login(@RequestBody User user, HttpSession session){
         System.out.println("UserApiController : login 호출됨");
         User principal = userService.login (user); // principal(접근주체)

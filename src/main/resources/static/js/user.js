@@ -19,14 +19,14 @@ let index = {
         //console.log(data);
         $.ajax({
             type: "POST",
-            url: "/Project_9/Project_9/api/user",
+            url: "/api/user",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             dataType: "text"
         }).done(function (resp) {
             alert("회원가입이 완료되었습니다.");
             console.info();
-            location.href = "/Project_9"
+            location.href = "/"
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
@@ -41,13 +41,13 @@ let index = {
 
         $.ajax({
             type: "POST",
-            url: "/Project_9/Project_9/api/user/login",
+            url: "/api/user/login",
             data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
             dataType: "text"
         }).done(function (resp) {
             alert("로그인이 완료되었습니다.");
-            location.href = "/Project_9"
+            location.href = "/"
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });

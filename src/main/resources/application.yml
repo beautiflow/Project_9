@@ -1,7 +1,7 @@
 server:
   port: 8080
   servlet:
-    context-path: /Project_9
+    context-path: /
     encoding:
       charset: UTF-8
       enabled: true
