@@ -3,9 +3,13 @@ package com.example.project9.repository;
 import com.example.project9.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository <User, Integer>{
 
-    // Jpa Naming 쿼리
-    // SELECT * FROM user WHERE username = ?1 AND password = ?2;
-    User findByUsernameAndPassword(String username, String password);
+    Optional<Object> findByUsername(String username);
+
+    //  User findByUsernameAndPassword(String username, String password);
+
+
 }
