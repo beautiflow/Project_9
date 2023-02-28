@@ -4,10 +4,12 @@
 <%@ include file="../layout/header.jsp" %>
 
 <div class="container-fluid mt-3">
-    <form >
+    <form>
+        <input type="hidden" id="id" value="${principal.user.id}"/>
+
         <div class="mb-3 mt-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+            <input type="text" value="${principal.user.username}" class="form-control" id="username" placeholder="Enter username" name="username" readonly>
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -15,11 +17,10 @@
         </div>
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" value="${principal.user.email}" class="form-control" id="email" placeholder="Enter email" name="email">
         </div>
-
     </form>
-    <button id ="btn-save" class="btn btn-primary">회원가입완료</button>
+    <button id ="btn-update" class="btn btn-primary">회원수정완료</button>
 </div>
 
 <script src="/js/user.js"></script>
