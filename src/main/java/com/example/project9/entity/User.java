@@ -22,7 +22,7 @@ public class User extends TimeEntity{
     private int id;
 
     @NotNull
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 100, unique = true)
     private String username;
 
     @NotNull
@@ -34,6 +34,8 @@ public class User extends TimeEntity{
 
     @Enumerated(EnumType.STRING)
     private RoleType role;
+
+    private String oauth;
 
     @CreationTimestamp
     private Timestamp createDate;

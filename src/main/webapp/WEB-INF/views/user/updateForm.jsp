@@ -11,14 +11,19 @@
             <label for="username" class="form-label">Username</label>
             <input type="text" value="${principal.user.username}" class="form-control" id="username" placeholder="Enter username" name="username" readonly>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
-        </div>
+
+        <c:if test="${empty principal.user.oauth}">
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" name="pswd">
+            </div>
+        </c:if>
+
         <div class="mb-3 mt-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" value="${principal.user.email}" class="form-control" id="email" placeholder="Enter email" name="email">
+            <input type="email" value="${principal.user.email}" class="form-control" id="email" placeholder="Enter email" name="email"readonly>
         </div>
+
     </form>
     <button id ="btn-update" class="btn btn-primary">회원수정완료</button>
 </div>
