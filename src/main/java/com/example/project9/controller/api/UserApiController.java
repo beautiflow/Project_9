@@ -1,6 +1,5 @@
 package com.example.project9.controller.api;
 
-import com.example.project9.config.auth.PrincipalDetail;
 import com.example.project9.dto.ResponseDto;
 import com.example.project9.entity.User;
 import com.example.project9.service.UserService;
@@ -9,12 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 
 @RestController
 @ResponseBody
